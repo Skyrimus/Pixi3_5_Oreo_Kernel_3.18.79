@@ -686,5 +686,5 @@
 };
 /* CONSYS end */
 
-#include <k80_bsp/cust.dtsi>
+#include <pixi3_5/cust.dtsi>
 /*End of this file, DO NOT ADD ANYTHING HERE*/
