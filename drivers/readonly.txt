@@ -1,0 +1,200 @@
+block/xen-blkback/common.h:	unsigned char		readonly;
+block/xen-blkback/xenbus.c:		blkdev_put(vbd->bdev, vbd->readonly ? FMODE_READ : FMODE_WRITE);
+block/xen-blkback/xenbus.c:			  unsigned major, unsigned minor, int readonly,
+block/xen-blkback/xenbus.c:	vbd->readonly = readonly;
+block/xen-blkback/xenbus.c:	bdev = blkdev_get_by_dev(vbd->pdevice, vbd->readonly ?
+block/xen-blkback/xenbus.c:			    (be->blkif->vbd.readonly ? VDISK_READONLY : 0));
+block/xen-blkback/blkback.c:	if ((operation != READ) && vbd->readonly)
+block/xen-blkback/blkback.c:				flags |= GNTMAP_readonly;
+usb/host/ehci-hcd.c:	 * Scsi_Host.highmem_io, and so forth.  It's readonly to all
+usb/host/ehci-hcd.c:	/* cache this readonly data; minimize chip reads */
+usb/host/oxu210hp-hcd.c:	 * Scsi_Host.highmem_io, and so forth.  It's readonly to all
+usb/host/fusbh200-hcd.c:	 * Scsi_Host.highmem_io, and so forth.  It's readonly to all
+usb/host/fusbh200-hcd.c:	/* cache this readonly data; minimize chip reads */
+usb/host/ehci-tilegx.c:	/* cache this readonly data; minimize chip reads */
+usb/host/fotg210-hcd.c:	 * Scsi_Host.highmem_io, and so forth.  It's readonly to all
+usb/host/fotg210-hcd.c:	/* cache this readonly data; minimize chip reads */
+usb/phy/phy-isp1301-omap.c:#define	ISP1301_OTG_STATUS		0x10	/* u8 readonly */
+power/smb347-charger.c:		goto fail_readonly;
+power/smb347-charger.c:fail_readonly:
+md/raid5.c:			 * readonly mode so it can take control before
+md/dm-verity-target.c:		ti->error = "Device must be readonly";
+md/md.c:static int start_readonly;
+md/md.c: * readonly
+md/md.c: *     like readonly, but behaves like 'clean' on a write request.
+md/md.c:enum array_state { clear, inactive, suspended, readonly, read_auto, clean, active,
+md/md.c:	"clear", "inactive", "suspended", "readonly", "read-auto", "clean", "active",
+md/md.c:			st = readonly;
+md/md.c:static int md_set_readonly(struct mddev *mddev, struct block_device *bdev);
+md/md.c:	case readonly:
+md/md.c:			err = md_set_readonly(mddev, NULL);
+md/md.c:				err = md_set_readonly(mddev, NULL);
+md/md.c:	if (start_readonly && mddev->ro == 0)
+md/md.c:	} else if (mddev->ro == 2) /* auto-readonly not meaningful */
+md/md.c:static int md_set_readonly(struct mddev *mddev, struct block_device *bdev)
+md/md.c:		err = md_set_readonly(mddev, bdev);
+md/md.c:		/* if the bdev is going readonly the value of mddev->ro
+md/md.c:	return sprintf(buffer, "%d", start_readonly);
+md/md.c:		start_readonly = num;
+hid/hid-picolcd_debugfs.c:	"success", "parameter missing", "data_missing", "block readonly",
+misc/mediatek/eccci/ccci_modem.h:	 * the following members are readonly for CCCI core. they are maintained by modem and
+misc/mediatek/gpu/gpu_mali/mali_midgard/mali-r12p1/drivers/gpu/arm/midgard/mali_kbase_defs.h: * @return readonly reference to dependent ATOM.
+misc/mediatek/gpu/gpu_mali/mali_midgard/mali-r18p0/drivers/gpu/arm/midgard/mali_kbase_defs.h: * @return readonly reference to dependent ATOM.
+misc/mediatek/gpu/gpu_mali/mali_midgard/mali-r7p0/drivers/gpu/arm/midgard/mali_kbase_defs.h: * @return readonly reference to dependent ATOM.
+misc/mediatek/gpu/gpu_mali/mali_midgard/mali-r16p0/drivers/gpu/arm/midgard/mali_kbase_defs.h: * @return readonly reference to dependent ATOM.
+misc/mediatek/gpu/gpu_mali/mali_midgard/mali-r12p0/drivers/gpu/arm/midgard/mali_kbase_defs.h: * @return readonly reference to dependent ATOM.
+misc/mediatek/gpu/gpu_mali/mali_midgard/mali-r7p0_v2/drivers/gpu/arm/midgard/mali_kbase_defs.h: * @return readonly reference to dependent ATOM.
+misc/mediatek/gpu/gpu_mali/mali_midgard/mali-EAC/drivers/gpu/arm/midgard/mali_kbase_defs.h: * @return readonly reference to dependent ATOM.
+misc/mic/host/mic_fops.c: * Maps the device page and virtio rings to user space for readonly access.
+misc/eeprom/at25.c:		 * to readonly sections of the EEPROM...
+misc/eeprom/at25.c:		(chip.flags & EE_READONLY) ? " (readonly)" : "",
+misc/eeprom/Kconfig:	     24c00, 24c01, 24c02, spd (readonly 24c02), 24c04, 24c08,
+misc/eeprom/eeprom_93xx46.c:		(pd->flags & EE_READONLY) ? "(readonly)" : "");
+hwmon/ltc4245.c:	LTC4245_STATUS			= 0x00, /* readonly */
+hwmon/abituguru.c:	 * readonly bits in the settings part of the relevant sensor.
+hwmon/pmbus/pmbus_core.c:					     bool update, bool readonly)
+hwmon/pmbus/pmbus_core.c:			    readonly ? S_IRUGO : S_IRUGO | S_IWUSR,
+hwmon/ina2xx.c:#define INA2XX_SHUNT_VOLTAGE		0x01 /* readonly */
+hwmon/ina2xx.c:#define INA2XX_BUS_VOLTAGE		0x02 /* readonly */
+hwmon/ina2xx.c:#define INA2XX_POWER			0x03 /* readonly */
+hwmon/ina2xx.c:#define INA2XX_CURRENT			0x04 /* readonly */
+hwmon/ltc4261.c:#define LTC4261_STATUS	0x00	/* readonly */
+hwmon/jc42.c:	bool readonly;
+hwmon/jc42.c:		readonly = config & JC42_CFG_TCRIT_LOCK;
+hwmon/jc42.c:		readonly = config & JC42_CFG_EVENT_LOCK;
+hwmon/jc42.c:		readonly = config & (JC42_CFG_EVENT_LOCK | JC42_CFG_TCRIT_LOCK);
+hwmon/jc42.c:		readonly = true;
+hwmon/jc42.c:	return S_IRUGO | (readonly ? 0 : S_IWUSR);
+hwmon/abituguru3.c:	 * is stored in a few readonly bits in the settings of the sensor.
+net/wireless/airo.c:#define RID_ACTUALCONFIG 0xFF20 /*readonly*/
+net/ethernet/neterion/vxge/vxge-config.h: * @host_control: This field is exclusively for host use and is "readonly"
+net/ieee802154/at86rf230.c:	/* readonly regs */
+net/xen-netback/netback.c:			  GNTMAP_host_map | GNTMAP_readonly,
+net/xen-netfront.c:				queue->grant_tx_ref[id], GNTMAP_readonly);
+net/xen-netfront.c:						mfn, GNTMAP_readonly);
+net/xen-netfront.c:							mfn, GNTMAP_readonly);
+net/xen-netfront.c:		ref, queue->info->xbdev->otherend_id, mfn, GNTMAP_readonly);
+net/xen-netfront.c:					  GNTMAP_readonly,
+gpu/drm/radeon/radeon.h:extern bool radeon_ttm_tt_is_readonly(struct ttm_tt *ttm);
+gpu/drm/radeon/radeon_ttm.c:bool radeon_ttm_tt_is_readonly(struct ttm_tt *ttm)
+gpu/drm/radeon/radeon_vm.c:	if (bo_va->bo && radeon_ttm_tt_is_readonly(bo_va->bo->tbo.ttm))
+gpu/drm/radeon/radeon_gem.c:		/* readonly pages not tested on older hardware */
+gpu/drm/i915/i915_gem_userptr.c:		 * page is readonly, so this is just a placeholder in the uAPI.
+gpu/drm/i915/i915_gem.c:			       bool readonly);
+gpu/drm/i915/i915_gem.c:			       bool readonly)
+gpu/drm/i915/i915_gem.c:	seqno = readonly ? obj->last_write_seqno : obj->last_read_seqno;
+gpu/drm/i915/i915_gem.c:					    bool readonly)
+gpu/drm/i915/i915_gem.c:	seqno = readonly ? obj->last_write_seqno : obj->last_read_seqno;
+staging/wlan-ng/prism2mib.c:			    P80211ENUM_resultcode_cant_set_readonly_mib;
+staging/wlan-ng/p80211types.h:#define P80211ENUM_resultcode_cant_set_readonly_mib	10
+spi/spi.c: * with other readonly (flashable) information about mainboard devices.
+xen/gntdev.c:			(map->flags & GNTMAP_readonly)) {
+xen/gntdev.c:				(map->flags & GNTMAP_readonly))
+xen/gntdev.c:			map->flags |= GNTMAP_readonly;
+xen/gntalloc.c:	int i, rc, readonly;
+xen/gntalloc.c:	readonly = !(op->flags & GNTALLOC_FLAG_WRITABLE);
+xen/gntalloc.c:			pfn_to_mfn(page_to_pfn(gref->page)), readonly);
+xen/xen-scsiback.c:			nr_segments, GNTMAP_host_map | GNTMAP_readonly);
+xen/xen-scsiback.c:		flags |= GNTMAP_readonly;
+xen/grant-table.c:	 * readonly is not in use in this function. If the grant entry is
+xen/grant-table.c:	int (*end_foreign_access_ref)(grant_ref_t ref, int readonly);
+xen/grant-table.c:				     unsigned long frame, int readonly)
+xen/grant-table.c:			   GTF_permit_access | (readonly ? GTF_readonly : 0));
+xen/grant-table.c:				int readonly)
+xen/grant-table.c:	gnttab_grant_foreign_access_ref(ref, domid, frame, readonly);
+xen/grant-table.c:static int gnttab_end_foreign_access_ref_v1(grant_ref_t ref, int readonly)
+xen/grant-table.c:static inline int _gnttab_end_foreign_access_ref(grant_ref_t ref, int readonly)
+xen/grant-table.c:	return gnttab_interface->end_foreign_access_ref(ref, readonly);
+xen/grant-table.c:int gnttab_end_foreign_access_ref(grant_ref_t ref, int readonly)
+xen/grant-table.c:	if (_gnttab_end_foreign_access_ref(ref, readonly))
+xen/grant-table.c:static void gnttab_add_deferred(grant_ref_t ref, bool readonly,
+xen/grant-table.c:		entry->ro = readonly;
+xen/grant-table.c:void gnttab_end_foreign_access(grant_ref_t ref, int readonly,
+xen/grant-table.c:	if (gnttab_end_foreign_access_ref(ref, readonly)) {
+xen/grant-table.c:		gnttab_add_deferred(ref, readonly,
+target/target_core_iblock.c:	if (!ib_dev->ibd_readonly)
+target/target_core_iblock.c:	Opt_udev_path, Opt_readonly, Opt_force, Opt_err
+target/target_core_iblock.c:	{Opt_readonly, "readonly=%d"},
+target/target_core_iblock.c:	unsigned long tmp_readonly;
+target/target_core_iblock.c:		case Opt_readonly:
+target/target_core_iblock.c:			ret = kstrtoul(arg_p, 0, &tmp_readonly);
+target/target_core_iblock.c:						" readonly=\n");
+target/target_core_iblock.c:			ib_dev->ibd_readonly = tmp_readonly;
+target/target_core_iblock.c:			pr_debug("IBLOCK: readonly: %d\n", ib_dev->ibd_readonly);
+target/target_core_iblock.c:	bl += sprintf(b + bl, "  readonly: %d\n", ib_dev->ibd_readonly);
+target/target_core_iblock.h:	bool ibd_readonly;
+infiniband/hw/qib/qib.h:	 * this address is mapped readonly into user processes so they can
+infiniband/hw/qib/qib.h:	 * Most of them are readonly, but some are write-only register,
+infiniband/hw/qib/qib.h:	 * mapped readonly into user processes so they can get unit and
+infiniband/hw/qib/qib.h:	 * Most of them are readonly, but some are write-only register,
+infiniband/hw/qib/qib_file_ops.c:	 * only allowed readonly mapping.
+infiniband/hw/qib/qib_file_ops.c:				 "%s must be mapped readonly\n", what);
+infiniband/hw/qib/qib_common.h:	 * Base address of readonly memory copy of the pioavail registers.
+infiniband/hw/qib/qib_common.h:	/* address of readonly memory copy of the rcvhdrq tail register. */
+infiniband/hw/ipath/ipath_kernel.h:	 * this address is mapped readonly into user processes so they can
+infiniband/hw/ipath/ipath_kernel.h:	 * Most of them are readonly, but some are write-only register,
+infiniband/hw/ipath/ipath_common.h:	 * Base address of readonly memory copy of the pioavail registers.
+infiniband/hw/ipath/ipath_common.h:	/* address of readonly memory copy of the rcvhdrq tail register. */
+infiniband/hw/ipath/ipath_file_ops.c:				 "%s must be mapped readonly\n", what);
+infiniband/hw/ipath/ipath_file_ops.c:		 * The rcvhdrq itself; readonly except on HT (so have
+s390/block/dasd_fba.c:	int readonly;
+s390/block/dasd_fba.c:	readonly = dasd_device_is_ro(device);
+s390/block/dasd_fba.c:	if (readonly)
+s390/block/dasd_fba.c:		 readonly ? ", read-only device" : "");
+s390/block/dasd.c: * readonly device attribute, but how it is configured in z/VM.
+s390/block/dasd_eckd.c:	int readonly;
+s390/block/dasd_eckd.c:	readonly = dasd_device_is_ro(device);
+s390/block/dasd_eckd.c:	if (readonly)
+s390/block/dasd_eckd.c:		 readonly ? ", read-only device" : "");
+s390/block/dasd_devmap.c: * readonly controls the readonly status of a dasd
+s390/block/dasd_devmap.c:static DEVICE_ATTR(readonly, 0644, dasd_ro_show, dasd_ro_store);
+s390/block/dasd_devmap.c:	&dev_attr_readonly.attr,
+s390/scsi/zfcp_sysfs.c:ZFCP_DEFINE_ATTR_CONST(unit, access_readonly, "%d\n", 0);
+s390/scsi/zfcp_sysfs.c:	&dev_attr_unit_access_readonly.attr,
+isdn/hysdn/boardergo.h:	 *   readonly (reseting on int from E1 to PC),
+isdn/i4l/isdn_tty.c:		/* readonly registers */
+input/touchscreen/mediatek/GT9XX_hotknot_scp/gt9xx_update.c:u8 gup_check_rootfs_readonly(void)
+input/touchscreen/mediatek/GT9XX_hotknot_scp/gt9xx_update.c:	if (__mnt_is_readonly(root_path.mnt) == 1) {
+input/touchscreen/mediatek/GT9XX_hotknot_scp/gt9xx_update.c:	while (FAIL == gup_check_rootfs_readonly()) {
+scsi/aacraid/aacraid.h:						   readonly, etc. */
+rtc/rtc-mpc5121.c:	 *	readonly time since VBAT_RTC was last connected
+rtc/rtc-lp8788.c:	/* because rtc weekday is a readonly register, do not update */
+mtd/sm_ftl.h:	bool readonly;			/* is FS readonly */
+mtd/mtdswap.c:		mbd_dev->readonly = 1;
+mtd/ssfdc.c:	ssfdc->mbd.readonly = 1;
+mtd/rfd_ftl.c:			part->mbd.readonly = 1;
+mtd/rfd_ftl.c:			part->mbd.readonly = 1;
+mtd/sm_ftl.c:	BUG_ON(ftl->readonly);
+mtd/sm_ftl.c:	BUG_ON(ftl->readonly);
+mtd/sm_ftl.c:	ftl->readonly = mtd->type == MTD_ROM;
+mtd/sm_ftl.c:			if (!ftl->readonly)
+mtd/sm_ftl.c:	BUG_ON(ftl->readonly);
+mtd/sm_ftl.c:	trans->readonly = ftl->readonly;
+mtd/mtdblock.c:		dev->mbd.readonly = 1;
+mtd/nand/r852.c:	int readonly;
+mtd/nand/r852.c:	readonly  = r852_read_reg(dev, R852_CARD_STA) & R852_CARD_STA_RO;
+mtd/nand/r852.c:		readonly ? "readonly" : "writeable");
+mtd/nand/r852.c:	dev->readonly = readonly;
+mtd/nand/r852.c:	if (dev->readonly)
+mtd/nand/r852.h:#define R852_CARD_STA_RO	0x02	/* card is readonly */
+mtd/nand/r852.h:	int readonly;			/* card is readonly */
+mtd/mtdblock_ro.c:	dev->readonly = 1;
+mtd/mtd_blkdevs.c:		new->readonly = 1;
+mtd/mtd_blkdevs.c:	if (new->readonly)
+mfd/si476x-prop.c:static bool si476x_core_is_readonly_property(struct si476x_core *core,
+mfd/si476x-prop.c:		!si476x_core_is_readonly_property(core, (u16) reg);
+mfd/tps65010.c:				/* VBUS options are readonly until reconnect */
+mmc/core/sd.c:			mmc_card_set_readonly(card);
+mmc/card/block.c:static inline int mmc_blk_readonly(struct mmc_card *card)
+mmc/card/block.c:	return mmc_card_readonly(card) ||
+mmc/card/block.c:	md->read_only = mmc_blk_readonly(card);
+mmc/host/sdhci.c:	int is_readonly;
+mmc/host/sdhci.c:		is_readonly = 0;
+mmc/host/sdhci.c:		is_readonly = host->ops->get_ro(host);
+mmc/host/sdhci.c:		is_readonly = !(sdhci_readl(host, SDHCI_PRESENT_STATE)
+mmc/host/sdhci.c:		!is_readonly : is_readonly;
+mmc/host/au1xmmc.c:static int au1xmmc_card_readonly(struct mmc_host *mmc)
+mmc/host/au1xmmc.c:	if (host->platdata && host->platdata->card_readonly)
+mmc/host/au1xmmc.c:		return !!host->platdata->card_readonly(mmc);
+mmc/host/au1xmmc.c:	.get_ro		= au1xmmc_card_readonly,
+mmc/host/sdricoh_cs.c:		"Use this when unlocked cards are shown readonly (default 0)");

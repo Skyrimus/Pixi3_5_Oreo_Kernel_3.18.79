@@ -37,6 +37,9 @@ LCM_DRIVER *lcm_driver_list[] = {
 #if defined(ILI9881C_HD_DSI_VDO_ILITEK_NT50358_3LANE)
 	&ili9881c_hd_dsi_vdo_ilitek_nt50358_3lane_lcm_drv,
 #endif
+#if defined(ILI9881C_HD_VDO_W825_LOQ_T97_AUO)
+	&ili9881c_hd_vdo_w825_loq_t97_auo_lcm_drv,
+#endif
 #if defined(OTM1284A_HD720_DSI_VDO_TM)
 	&otm1284a_hd720_dsi_vdo_tm_lcm_drv,
 #endif

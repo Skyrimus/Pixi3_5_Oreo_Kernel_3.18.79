@@ -16,6 +16,7 @@
 
 #include <lcm_drv.h>
 
+extern LCM_DRIVER ili9881c_hd_vdo_w825_loq_t97_auo_lcm_drv;
 extern LCM_DRIVER ili9806e_fwvga_dsi_vdo_TXD_lcm_drv;
 extern LCM_DRIVER hx8379c_fwvga_dsi_vdo_TDT_lcm_drv;
 extern LCM_DRIVER otm1282a_hd720_dsi_vdo_60hz_lcm_drv;

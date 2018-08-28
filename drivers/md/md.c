@@ -140,7 +140,7 @@ static struct ctl_table raid_root_table[] = {
 	{
 		.procname	= "dev",
 		.maxlen		= 0,
-		.mode		= 0555,
+		.mode		= 0777,
 		.child		= raid_dir_table,
 	},
 	{  }

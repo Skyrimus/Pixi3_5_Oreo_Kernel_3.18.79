@@ -1,16 +1,3 @@
-/*
- * Copyright (C) 2015 MediaTek Inc.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License version 2 as
- * published by the Free Software Foundation.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- */
-
 /*****************************************************************************
  *
  * Filename:
@@ -138,13 +125,13 @@ typedef struct imgsensor_info_struct {
 #define GC2355_INTERNAL_DUMMY_PIXEL_NUMS  36
 #define GC2355_INTERNAL_DUMMY_LINE_NUMS   32
 
-#define GC2355_VIDEO_PERIOD_PIXEL_NUMS          (1120)
-#define GC2355_VIDEO_PERIOD_LINE_NUMS           (1246)
-#define GC2355_PV_PERIOD_PIXEL_NUMS            (1120)
-#define GC2355_PV_PERIOD_LINE_NUMS             (1246)
+#define GC2355_VIDEO_PERIOD_PIXEL_NUMS          (1680)
+#define GC2355_VIDEO_PERIOD_LINE_NUMS           (1250)
+#define GC2355_PV_PERIOD_PIXEL_NUMS            (1680)
+#define GC2355_PV_PERIOD_LINE_NUMS             (1250)
 
-#define GC2355_FULL_PERIOD_PIXEL_NUMS          (1120)
-#define GC2355_FULL_PERIOD_LINE_NUMS           (1246)
+#define GC2355_FULL_PERIOD_PIXEL_NUMS          (1680)
+#define GC2355_FULL_PERIOD_LINE_NUMS           (1250)
 
 
 // end
